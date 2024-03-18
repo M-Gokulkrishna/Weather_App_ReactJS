@@ -1,0 +1,143 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Color1: #ff3366;
+    --Color2: #ffffffdb;
+    --Color3: #2B124C;
+    --Color4: #000000d8;
+}
+
+.Draft-Page {
+    position: relative;
+    user-select: none;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(circle at top left, rgb(36, 9, 119) 0%, rgb(36, 9, 119) 48%, rgb(72, 7, 149) 48%, rgb(72, 7, 149) 53%, rgb(109, 5, 178) 53%, rgb(109, 5, 178) 56%, rgb(145, 2, 208) 56%, rgb(145, 2, 210) 69%, rgb(181, 0, 235) 69%, rgb(181, 0, 237) 100%);
+}
+
+.Draft-Container {
+    position: relative;
+    width: 60%;
+    height: 80%;
+    border-radius: 12px;
+    background-color: var(--Color1);
+}
+
+.Draft-Page-Header {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--Color3);
+    justify-content: center;
+    background-color: var(--Color2);
+    box-shadow: 0 6px 0 var(--Color4);
+}
+
+.Back-Home-Btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 12px;
+    color: var(--Color2);
+    background-color: #2B124C;
+    box-shadow: 0 0 10px var(--Color4);
+}
+
+.Back-Home-Btn:active {
+    transform: scale(0.9);
+}
+
+.Draft-Box-Container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow-y: scroll;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100% - 120px);
+}
+
+.Draft-Box-Container::-webkit-scrollbar {
+    display: none;
+}
+
+.EachCity-Box {
+    position: relative;
+    display: flex;
+    height: 20%;
+    width: 80%;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bolder;
+    align-items: center;
+    color: var(--Color3);
+    font-family: sans-serif;
+    justify-content: space-between;
+    background-color: var(--Color2);
+    box-shadow: 8px 8px 0 var(--Color3),
+        8px 8px 0 var(--Color3);
+}
+
+.EachCity-Box:active {
+    transform: scale(0.9);
+}
+.EachCity-Box > div:first-child{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.trash-div{
+    display: flex;
+    width: 60px;
+    height: 100%;
+    font-size: 28px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Color1);
+}
+@media (width<=850px) {
+    .Draft-Container {
+        width: 90%;
+        height: 90%;
+    }
+
+    .EachCity-Box {
+        width: 90%;
+    }
+}
+
+@media (width<=420px) {
+    .Draft-Container {
+        width: 100%;
+        height: 100%;
+        /* background-color: var(--Color3); */
+        background-image: radial-gradient(circle at top left, rgb(36, 9, 119) 0%, rgb(36, 9, 119) 48%, rgb(72, 7, 149) 48%, rgb(72, 7, 149) 53%, rgb(109, 5, 178) 53%, rgb(109, 5, 178) 56%, rgb(145, 2, 208) 56%, rgb(145, 2, 210) 69%, rgb(181, 0, 235) 69%, rgb(181, 0, 237) 100%);
+    }
+
+    .Draft-Page-Header {
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 6px 0 var(--Color1);
+    }
+
+    .EachCity-Box {
+        width: 90%;
+        height: 15%;
+    }
+}
